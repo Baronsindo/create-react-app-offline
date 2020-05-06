@@ -1,4 +1,9 @@
+#!/usr/bin/env node
 const yargs = require("yargs");
+const chalk = require("chalk");
+const boxen = require("boxen");
+const clear = require('clear');
+const figlet = require('figlet');
 
 /******************
  * Reading Arguments
