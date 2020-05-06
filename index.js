@@ -18,4 +18,41 @@ const options = yargs
     })
     .argv;
 
-console.log(options);
+        msg = `
+    Creat react app offline
+
+    Hello! i'm going to make it as fast as i can.`
+    createContent(msg);
+
+
+
+    // for creating the Header
+    function createHeader() {
+        clear();
+        console.log(
+            chalk.yellow(
+                figlet.textSync('C-R-A-O', {
+                    horizontalLayout: 'full'
+                })
+            )
+        );
+    }
+
+    // For Creating nice content 
+    function createContent(message, wh = false) {
+        if (wh) {
+            createHeader()
+        }
+    
+        const boxenOptions = {
+            padding: 1,
+            margin: 1,
+            borderStyle: "round",
+            borderColor: "green",
+            align: "canter"
+        };
+        const msgBox = boxen(message, boxenOptions);
+    
+        console.log(msgBox);
+    
+    }
