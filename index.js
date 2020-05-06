@@ -6,6 +6,9 @@ const boxen = require("boxen");
 const clear = require('clear');
 const figlet = require('figlet');
 
+const os = require('os');
+const extract = require('progress-extract');
+
 /******************
  * Reading Arguments
  ******************/
@@ -19,15 +22,15 @@ const options = yargs
     })
     .argv;
 
-    // A message to user
+// A message to user
 msg = `
     Creat react app offline
 
     Hello! i'm going to make it as fast as i can.`
-createContent(msg);
+createContent(msg,true);
 
 // unzip project to folder
-UnzipToFolder(__dirname+'/react-src/react.zip', options.name)
+UnzipToFolder(__dirname + '/react-src/react.zip', options.name)
 
 // Just succsess MSG
 function succsessMSG(foldername) {
