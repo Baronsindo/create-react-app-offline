@@ -7,7 +7,8 @@ const clear = require('clear');
 const figlet = require('figlet');
 
 const os = require('os');
-const extract = require('progress-extract');
+const _7z = require('7zip-min');    // 7z extract
+const ora = require('ora');         // Loading animation
 
 /******************
  * Reading Arguments
@@ -30,7 +31,7 @@ msg = `
 createContent(msg,true);
 
 // unzip project to folder
-UnzipToFolder(__dirname + '/react-src/react.zip', options.name)
+UnzipToFolder(__dirname + '/react-src/react.7z', options.name)
 
 // Just succsess MSG
 function succsessMSG(foldername) {
@@ -46,15 +47,20 @@ function succsessMSG(foldername) {
 
 // for unzipping react  to process folder
 function UnzipToFolder(src, foldername) {
+    const spinner = ora('Making some magic !').start();
     let target = process.cwd() + '/' + foldername
-    extract(src, target)
-        .then(() => {
+
+    _7z.unpack(src, target, (err, result)  => {
+        if(err){
+            message = chalk.white.bold('Something bad happend here is the error msg :\n\n\n' + err);
+            createContent(message, true);
+        }else{
+            spinner.stop();
             message = chalk.white.bold('Project Created successfully');
             createContent(message, true);
             succsessMSG(foldername);
-        }, err => {
-            createContent('extract failed' + err)
-        })
+        }
+    });
 }
 
 // for creating the Header
