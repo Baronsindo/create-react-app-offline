@@ -51,5 +51,5 @@ cd my-app
 Inside the newly created project, you can run some built-in commands:
 
 ### `npm start` or `yarn start`
-
+ 
 Enjoy it.
