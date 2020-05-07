@@ -7,7 +7,7 @@
     "crao": "./index.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified *****\""
   },
   "keywords": [
     "react",
