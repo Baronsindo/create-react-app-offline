@@ -1,6 +1,6 @@
 {
   "name": "create-react-app-offline",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "CRAO, a CLI that make react apps offline ASAP.",
   "main": "./index.js",
   "bin": {
@@ -14,10 +14,12 @@
     "git",
     "react-app",
     "create-react-app",
-    "node"
+    "node",
+    "javascript"
   ],
   "author": "Adil zakarya",
   "license": "ISC",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "dependencies": {
     "7zip-min": "^1.1.2",
     "boxen": "^4.0.0",
