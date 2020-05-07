@@ -1,6 +1,6 @@
 {
   "name": "create-react-app-offline",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CRAO, a CLI that make react apps offline ASAP.",
   "main": "./index.js",
   "bin": {
