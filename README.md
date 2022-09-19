@@ -2,7 +2,7 @@
 Create React apps with no build configuration offline every time.
 
 ### Installing the CLI 
-first time you need to install the CRAO CLI via this command, then after you'il be able to create React apps offline.
+first time you need to install the CRAO CLI via this command, then after you'll be able to create React apps offline.
 ```sh
 npm install -g create-react-app-offline
 ```
